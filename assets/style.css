@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    padding: 20px 0;
+    color: #908888;
+    align-items: center;
+}
+
+h4{
+    font-size: 1.4em;
+    color: #040861;
+}
+
+nav ul{
+    margin-left: 200px;
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a{
+    color: #908888;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover{
+    font-weight: bold;
+    color: #040861;
+}
+
+nav ul li a:hover::after{
+    content: '';
+    display: block;
+    border-bottom: 3px solid #040861;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -7px;
+}
+
+button{
+    border: none;
+    background-color: #FE7918;
+    padding: 8px 16px;
+    border-radius: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.side{
+    margin-left: -35px;
+    display: flex;
+    font-size: 0.8em;
+    list-style: none;
+    text-decoration: none;
+    height: 40%;
+    width: 250px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding-top: 10px;
+}
+
+.baner{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    text-align: left;
+    font-size: 48px;
+    color: #040861;
+    margin-top: 60%;
+    margin-right: auto;
+}
+
+span{
+    color: #9698B9;
+}
+
+section .container-service{
+    background-color: #040861;
+    color: white;
+    padding: 30px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.flex-service{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.flex-service div img{
+    width: 120px;
+}
+
+.konten{
+    background-color: #E1DDDD;
+}
+
+.flex-konten{
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+article p{
+    text-align: justify;
+    line-height: 20px;
+}
+
+.artikel{
+    flex: 2;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.profile{
+    width: 330px;
+    height: auto;
+    margin-left: 50px;
+    border: none;
+    border-radius: 5%;
+    margin-right: 80px;
+    padding: 20px;
+    background-color: #09DC90;
+    color: black;
+}
+
+.profile aside img{
+    border-radius: 50%;
+    width: 80px;
+}
+
+.profile ul li{
+    list-style: none;
+    line-height: 15px;
+}
+
+.profile table{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+footer div{
+    background-color: #192044;
+    color: white;
+    height: 30px;
+    padding: 8px;
+}
+
+footer div h5{
+    margin-top: auto;
+}
+
+/* Responsibilitas */
+@media screen and (max-width: 768px) {
+    nav ul{
+        display: flex;
+        width: 360px;
+    }
+
+    .baner .img img{
+        width: 400px;
+    }
+
+    .baner h1{
+        margin-top: 50px;
+        font-size: 1.2em;
+    }
+
+    span{
+        font-size: 0.8em;
+    }
+
+    
+    .flex-service div img{
+        width: 60px;
+    }
+
+    .flex-service{
+        font-size: 0.8em;
+    }
+
+    .flex-konten .artikel{
+        flex: 2;
+    }
+
+    .flex-konten .profile{
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav{
+        background-color: #040861;
+    }
+
+    h4{
+        font-size: 18px;
+        color: white;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul li a:hover{
+        font-weight: bold;
+        color: #FE7918;
+    }
+
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-around;
+        cursor: pointer;
+    
+    }
+    
+    .menu-toggle span{
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+    }
+    
+    .baner{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }    
+
+    .baner .img img{
+        width: 250px;
+    }
+
+    h1{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    span{
+        font-size: 10px;
+    }
+
+    .flex-service div img{
+        width: 40px;
+    }
+    
+    section .container-service{
+        font-size: 0.5em;
+    }
+
+    .flex-konten{
+        flex-direction: column;
+    }
+
+    .flex-konten .artikel{
+        width: 430px;
+        margin-left: -20px;
+        align-items: center;
+        font-size: 0.6em;
+    }
+
+    .flex-konten .profile{
+        width: 100%;
+        height: 200px;
+        margin-left: -50px;
+        margin-right: 0px;
+        border-radius: 0%;
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 0.6em;
+    }
+
+    .profile table{
+        margin: auto;
+    }
+
+    footer{
+        font-size: 0.6em;
+        margin-top: -50px;
+        margin-bottom: 0;
+    }
+
+    footer div h5{
+        margin-top: 10px;
+    }
+}
+
